@@ -169,7 +169,7 @@ const GridWrapper = React.forwardRef<HTMLDivElement, Props>(
     {
       currentDate,
       tasks,
-      onRangeSelect,
+    //   onRangeSelect,
       onTaskUpdate,
       onCellMouseDown,
       onCellMouseEnter,
@@ -195,7 +195,7 @@ const GridWrapper = React.forwardRef<HTMLDivElement, Props>(
       const taskId = activeId.slice(5);
       const targetIndex = parseInt(overId.split("-")[1], 10);
       if (Number.isNaN(targetIndex)) return;
-      const targetDate = days[targetIndex];
+    //   const targetDate = days[targetIndex];
       const t = tasks.find((x) => x.id === taskId);
       if (!t) return;
       const origStartIndex = days.findIndex((d) => isSameDay(d, t.startDate));
