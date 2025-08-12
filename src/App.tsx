@@ -7,7 +7,7 @@ import GridWrapper from "./components/CalendarGrid";
 import {
   getDaysInMonth,
   isSameDay,
-  isTaskInDateRange,
+  // isTaskInDateRange,
   generateId,
 } from "./utils";
 
@@ -129,7 +129,7 @@ const App: React.FC = () => {
   // Mouse handlers for drag selection (task creation)
 
   const onCellMouseDown = useCallback(
-    (e: React.MouseEvent, index: number) => {
+    (_e: React.MouseEvent, index: number) => {
       if (taskDragState.isDragging) return;
       setDragState({
         isSelecting: true,
